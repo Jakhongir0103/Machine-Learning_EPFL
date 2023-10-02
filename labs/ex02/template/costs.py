@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""a function used to compute the loss."""
+"""a function used to compute the loss using MSE"""
 
 import numpy as np
 
@@ -15,8 +15,5 @@ def compute_loss(y, tx, w):
     Returns:
         the value of the loss (a scalar), corresponding to the input parameters w.
     """
-    # ***************************************************
-    # INSERT YOUR CODE HERE
-    # TODO: compute loss by MSE
-    # ***************************************************
-    raise NotImplementedError
+    err=y-tx.dot(w)
+    return 0.5*np.power(err,2).sum()

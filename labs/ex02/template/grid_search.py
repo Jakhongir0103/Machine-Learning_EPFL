@@ -21,8 +21,9 @@ def get_best_parameters(w0, w1, losses):
     return losses[min_row, min_col], w0[min_row], w1[min_col]
 
 
-# ***************************************************
-# INSERT YOUR CODE HERE
-# TODO: Paste your implementation of grid_search
-#       here when it is done.
-# ***************************************************
+def grid_search(y, tx, grid_w0, grid_w1):
+    losses = np.zeros((len(grid_w0), len(grid_w1)))
+    for (w0_ind,w0) in enumerate(grid_w0):
+        for (w1_ind,w1) in enumerate(grid_w1):
+            losses[w0_ind,w1_ind]=compute_loss(y,tx,np.array([w0,w1]))
+    return losses
