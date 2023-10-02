@@ -12,7 +12,8 @@ def compute_subgradient_mae(y, tx, w):
     Returns:
         An array of shape (2, ) (same shape as w), containing the subgradient of the MAE at w.
     """
-    err=y-tx.dot(w)
-    N=len(y)
-    sign=np.sign(err)
-    return 0.5*(-tx.T.dot(sign))/N
+    # ***************************************************
+    # INSERT YOUR CODE HERE
+    # TODO: compute subgradient gradient vector for MAE
+    # ***************************************************
+    raise NotImplementedError
