@@ -15,4 +15,4 @@ def compute_subgradient_mae(y, tx, w):
     err=y-tx.dot(w)
     N=len(y)
     sign=np.sign(err)
-    return 0.5*(-tx.T.dot(sign))/N
+    return (-tx.T.dot(sign))/N
