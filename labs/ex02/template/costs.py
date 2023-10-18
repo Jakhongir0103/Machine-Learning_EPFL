@@ -15,6 +15,6 @@ def compute_loss(y, tx, w):
     Returns:
         the value of the loss (a scalar), corresponding to the input parameters w.
     """
-    err=y-tx.dot(w)
-    N=len(y)
-    return 0.5*np.power(err,2).sum()/N
+    err = y - tx.dot(w)
+    N = len(y)
+    return 0.5 * np.power(err,2).sum() / N
