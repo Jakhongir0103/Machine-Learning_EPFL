@@ -99,4 +99,5 @@ def plot_image_compression(original_image, image, assignments, mu, k):
     # ax3.set_title("Histogram of clustered pixels.")
     plt.tight_layout()
     plt.savefig("image_compression.png")
+    plt.title(f'K={k}')
     plt.show()
